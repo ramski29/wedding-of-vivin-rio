@@ -1,0 +1,184 @@
+:root {
+  --rosegold: #e3a177;
+  --bg: #0a0a0a;
+  --shadow: 0 3px 3px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 1900px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/jeremy-wong-weddings-464ps_nOflw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+}
+
+.hero h4 {
+  font-size: 1.8rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+}
+
+.hero a {
+  color: var(--rosegold);
+  background-color: rgb(41, 35, 35);
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: var(--rosegold);
+  color: rgb(41, 35, 35);
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url(img/flower-2108648-1560x1044.jpg);
+  /* background-color: aliceblue; */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: -5.4rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+}
+
+.home h2 {
+  color: var(--rosegold);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h3 {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple h3 {
+  font-family: "Sacramento";
+  font-size: 2.4rem;
+  color: var(--rosegold);
+}
+
+.home .couple img {
+  width: 100%;
+}
+
+.home .heart {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(60px);
+}
+
+.home .heart i {
+  margin: auto;
+  color: var(--rosegold);
+}
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 75%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 60px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 767.98px) {
+  html {
+    font-size: 65%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 50px;
+    margin: 8px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home .heart {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 60%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 3px;
+  }
+}
